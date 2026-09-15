@@ -1,24 +1,32 @@
 # 📱 QR Code Generator App (Python)
 
-A feature-rich, customizable **QR Code Generator application** built using Python. This repository contains the **Latest Modern GUI** version (built with `CustomTkinter`), **Classic GUI** legacy versions (built with native `Tkinter`), and a **CLI Version** for terminal usage.
+A feature-rich, customizable **QR Code Generator application** built using Python. This repository contains the **Latest
+Modern GUI** version (built with `CustomTkinter`), **Classic GUI** legacy versions (built with native `Tkinter`), and a
+**CLI Version** for terminal usage.
 
-The application allows users to generate custom-styled QR codes with personalized pattern colors, background colors, high-capacity error correction, and instant live previews.
+The application allows users to generate custom-styled QR codes with personalized pattern colors, background colors,
+high-capacity error correction, and instant live previews.
 
 ---
 
 ## ✨ Features
 
 ### 🌟 New Modern GUI (Latest Version)
-* **Modern UI & Themes:** Sleek CustomTkinter interface supporting **Dark Mode**, **Light Mode**, and **System Default** themes.
-* **Color Picker Wheel:** Built-in interactive color picker (`CTkColorPicker`) to easily select custom pattern and background colors.
+
+* **Modern UI & Themes:** Sleek CustomTkinter interface supporting **Dark Mode**, **Light Mode**, and **System Default**
+  themes.
+* **Color Picker Wheel:** Built-in interactive color picker (`CTkColorPicker`) to easily select custom pattern and
+  background colors.
 * **Icon-enhanced Controls:** Visual icon buttons for Generate, Clear, Save, Theme toggle, and Help.
 * **Input Validation:** Built-in color verification (`colour` library) and input sanitization to prevent errors.
 * **Pop-up Notifications:** Stylish alert and help dialogues (`CTkMessagebox`).
 * **Live QR Preview:** Instant high-resolution preview of the generated QR code before saving.
 * **Export Options:** Save generated QR codes as `.png` or `.jpg` files in any directory.
-* **Error Correction:** Uses High Level Error Correction (`ERROR_CORRECT_H` ~30% recovery) so QR codes remain readable even if partially damaged or obscured.
+* **Error Correction:** Uses High Level Error Correction (`ERROR_CORRECT_H` ~30% recovery) so QR codes remain readable
+  even if partially damaged or obscured.
 
 ### 🏛️ Classic GUI & CLI (Legacy & Terminal Versions)
+
 * **Classic GUI:** Lightweight interface built using Python's native `Tkinter` (`Old UI/main.py`).
 * **CLI Version:** Command-line script (`Old UI/QR Generator CLI.py`) for generating QR codes directly in the terminal.
 * Supports custom color choices and text input for color names or hex codes.
@@ -35,16 +43,17 @@ Before running the application, ensure you have Python installed on your system.
 
 The application relies on the third-party libraries listed in `requirements.txt`:
 
-| Package | Purpose | Used In |
-| :--- | :--- | :--- |
-| `customtkinter` | Modern UI framework and dark/light theme support | Modern GUI |
-| `CTkColorPicker` | Interactive color wheel popup | Modern GUI |
-| `CTkMessagebox` | Modern notification dialogs | Modern GUI |
-| `qrcode` | QR code generation engine | Modern GUI, Classic GUI & CLI |
-| `Pillow` (`PIL`) | Image processing and canvas rendering | Modern & Classic GUI |
-| `colour` | Color name & Hex validation | Modern & Classic GUI |
+| Package          | Purpose                                          | Used In                       |
+|:-----------------|:-------------------------------------------------|:------------------------------|
+| `customtkinter`  | Modern UI framework and dark/light theme support | Modern GUI                    |
+| `CTkColorPicker` | Interactive color wheel popup                    | Modern GUI                    |
+| `CTkMessagebox`  | Modern notification dialogs                      | Modern GUI                    |
+| `qrcode`         | QR code generation engine                        | Modern GUI, Classic GUI & CLI |
+| `Pillow` (`PIL`) | Image processing and canvas rendering            | Modern & Classic GUI          |
+| `colour`         | Color name & Hex validation                      | Modern & Classic GUI          |
 
-> **Note for Linux Users:** If you are running Linux, `tkinter` might not come pre-installed with Python. Install it using your system package manager:
+> **Note for Linux Users:** If you are running Linux, `tkinter` might not come pre-installed with Python. Install it
+> using your system package manager:
 > ```bash
 > sudo apt-get install python3-tk
 > ```
@@ -80,7 +89,46 @@ The application relies on the third-party libraries listed in `requirements.txt`
 ## 🚀 How to Run the Application
 
 ### 1️⃣ Run Modern GUI (Latest Version - Recommended)
+
 Execute the main script in the `Modern UI` directory:
+
 ```bash
 python "Modern UI/main.py"
+```
+
+### 2️⃣ Run Classic GUI (Tkinter Version)
+
+Execute the classic GUI script in the `Old UI` directory:
+
+```bash
+python "Modern UI/main.py"
+```
+
+### 3️⃣ Run CLI Version (Terminal Interface)
+
+Run the interactive `command-line interface` script:
+
+```bash
+python "Old UI/QR Generator CLI.py"
+```
+
+---
+
+## 📁 Directory Structure
+
+```
+QR-Code-Generator-App-using-Python/
+├── Modern UI/
+│   ├── Icons/
+│   ├── backend.py
+│   └── main.py
+├── Old UI/
+│   ├── Icons/
+│   ├── main.py
+│   └── QR Generator CLI.py
+├── Project PPT/
+│   └── QR CODE GENERATOR 1.0.pptx
+├── Saved QR Codes/
+├── readme.md
+└── requirements.txt
 ```
