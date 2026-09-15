@@ -55,8 +55,8 @@ The application relies on the third-party libraries listed in `requirements.txt`
 
 1. **Clone or Download the Repository:**
    ```bash
-   git clone https://github.com/your-username/QR-Code-Generator-App-using-Python.git
-   cd QR-Code-Generator-App-using-Python
+   git clone https://github.com/aransari1/QR-Code-Generator.git
+   cd QR-Code-Generator
    ```
 
 2. **Set Up Virtual Environment & Install Dependencies:**
