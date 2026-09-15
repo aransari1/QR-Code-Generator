@@ -1,6 +1,6 @@
 # 📱 QR Code Generator App (Python)
 
-A feature-rich, customizable **QR Code Generator application** built using Python. This repository contains both the **Latest Modern GUI** version (built with `CustomTkinter`) and the **Classic GUI** legacy versions (built with native `Tkinter`).
+A feature-rich, customizable **QR Code Generator application** built using Python. This repository contains the **Latest Modern GUI** version (built with `CustomTkinter`), **Classic GUI** legacy versions (built with native `Tkinter`), and a **CLI Version** for terminal usage.
 
 The application allows users to generate custom-styled QR codes with personalized pattern colors, background colors, high-capacity error correction, and instant live previews.
 
@@ -11,16 +11,17 @@ The application allows users to generate custom-styled QR codes with personalize
 ### 🌟 New Modern GUI (Latest Version)
 * **Modern UI & Themes:** Sleek CustomTkinter interface supporting **Dark Mode**, **Light Mode**, and **System Default** themes.
 * **Color Picker Wheel:** Built-in interactive color picker (`CTkColorPicker`) to easily select custom pattern and background colors.
+* **Icon-enhanced Controls:** Visual icon buttons for Generate, Clear, Save, Theme toggle, and Help.
 * **Input Validation:** Built-in color verification (`colour` library) and input sanitization to prevent errors.
 * **Pop-up Notifications:** Stylish alert and help dialogues (`CTkMessagebox`).
 * **Live QR Preview:** Instant high-resolution preview of the generated QR code before saving.
 * **Export Options:** Save generated QR codes as `.png` or `.jpg` files in any directory.
 * **Error Correction:** Uses High Level Error Correction (`ERROR_CORRECT_H` ~30% recovery) so QR codes remain readable even if partially damaged or obscured.
 
-### 🏛️ Classic GUI (Legacy Versions)
-* Lightweight interface built using Python's native `Tkinter`.
-* Supports basic color chooser dialogues and text input for Hex/Color names.
-* Includes historical iterations of the app (`GUI 1.0`, `GUI 2.0`, `GUI 4.0`, and `QR Generator GUI.py`).
+### 🏛️ Classic GUI & CLI (Legacy & Terminal Versions)
+* **Classic GUI:** Lightweight interface built using Python's native `Tkinter` (`Old UI/main.py`).
+* **CLI Version:** Command-line script (`Old UI/QR Generator CLI.py`) for generating QR codes directly in the terminal.
+* Supports custom color choices and text input for color names or hex codes.
 
 ---
 
@@ -32,14 +33,14 @@ Before running the application, ensure you have Python installed on your system.
 
 ### 📦 Required Python Packages
 
-The application relies on the following third-party libraries:
+The application relies on the third-party libraries listed in `requirements.txt`:
 
 | Package | Purpose | Used In |
 | :--- | :--- | :--- |
 | `customtkinter` | Modern UI framework and dark/light theme support | Modern GUI |
 | `CTkColorPicker` | Interactive color wheel popup | Modern GUI |
 | `CTkMessagebox` | Modern notification dialogs | Modern GUI |
-| `qrcode` | QR code generation engine | Modern & Classic GUI |
+| `qrcode` | QR code generation engine | Modern GUI, Classic GUI & CLI |
 | `Pillow` (`PIL`) | Image processing and canvas rendering | Modern & Classic GUI |
 | `colour` | Color name & Hex validation | Modern & Classic GUI |
 
@@ -58,22 +59,20 @@ The application relies on the following third-party libraries:
    cd QR-Code-Generator-App-using-Python
    ```
 
-2. **Create a Virtual Environment (Optional but Recommended):**
-   * **Windows:**
-     ```bash
-     python -m venv venv
-     venv\Scripts\activate
-     ```
-   * **macOS / Linux:**
-     ```bash
-     python3 -m venv venv
-     source venv/bin/activate
-     ```
+2. **Set Up Virtual Environment & Install Dependencies:**
 
-3. **Install Dependencies:**
-   Run the following command to install all required packages at once:
    ```bash
-   pip install customtkinter CTkColorPicker CTkMessagebox qrcode pillow colour
+   # 1. Create a virtual environment named 'venv'
+   python -m venv venv
+
+   # 2. Activate it 
+   # On Windows:
+   venv\Scripts\activate
+   # On Mac/Linux:
+   source venv/bin/activate
+
+   # 3. Install all packages safely inside the environment
+   pip install -r requirements.txt
    ```
 
 ---
@@ -81,4 +80,7 @@ The application relies on the following third-party libraries:
 ## 🚀 How to Run the Application
 
 ### 1️⃣ Run Modern GUI (Latest Version - Recommended)
-Navigate to the `QR Generator with Modern UI` directory and execute the main script:
+Execute the main script in the `Modern UI` directory:
+```bash
+python "Modern UI/main.py"
+```
